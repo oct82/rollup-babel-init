@@ -1,5 +1,6 @@
 import mda from './mda.js'
+import args from './args.json'
 
 export default function () {
-  console.log(`mda(3,3,3):\n\n${JSON.stringify(mda(3,3,3))}`)
+  console.log(`mda(${args.toString()}):\n\n${JSON.stringify(mda(...args))}`)
 }
