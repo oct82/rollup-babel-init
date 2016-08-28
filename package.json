@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "rollup -c",
-    "test": "node -p 'require(`./main.bundle.js`)()'",
+    "test": "node -p 'require(`./dist/bundle.umd.js`)()'",
     "start": "npm run build && npm test"
   },
   "devDependencies": {
