@@ -1,8 +1,11 @@
 {
   "scripts": {
     "build": "rollup -c",
-    "test": "node -e 'require(`./dist/bundle.umd.js`)()'",
-    "start": "npm run build && npm test"
+    "clean": "rm -rf dist",
+    "cjs": "node -p 'require(`./dist/bundle.cjs.js`)()'",
+    "umd": "node -p 'require(`./dist/bundle.umd.js`)()'",
+    "test": "npm run cjs && npm run umd",
+    "start": "npm run clean && npm run build && npm run test"
   },
   "devDependencies": {
     "babel-preset-es2015-rollup": "1.2.0",

@@ -1,0 +1,14 @@
+<pre />
+<title>umd check</title>
+<script src='../../dist/bundle.umd.js'></script>
+<script>
+
+const set = test => document.querySelector('pre').innerHTML = test
+
+try {
+  set(mdaExample())
+} catch(e) {
+  set('Run "npm run build" first.')
+}
+
+</script>
